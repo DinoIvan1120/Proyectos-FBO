@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>SAASA — Informe de Avance de Proyectos</title>
+<style>
+  :root{
+    --bg:#eef1f5;
+    --card:#ffffff;
+    --ink:#0f172a;
+    --muted:#64748b;
+    --teal:#0d9488;
+    --line:#e6e9ef;
+
+    --green-bg:#dcfce7; --green-fg:#15803d;
+    --amber-bg:#fef3c7; --amber-fg:#b45309;
+    --blue-bg:#dbeafe;  --blue-fg:#1d4ed8;
+    --slate-bg:#e2e8f0; --slate-fg:#475569;
+    --violet-bg:#ede9fe; --violet-fg:#6d28d9;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    padding:40px 24px 80px;
+    background:var(--bg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+  }
+  .wrap{max-width:1040px;margin:0 auto;}
+
+  .hero{
+    background:var(--card);
+    border-radius:18px;
+    padding:32px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-bottom:28px;
+  }
+  .eyebrow{
+    color:var(--teal);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.06em;
+    margin-bottom:10px;
+  }
+  h1{
+    font-size:34px;
+    margin:0 0 18px;
+    letter-spacing:-0.01em;
+  }
+  .meta{
+    text-align:right;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.9;
+  }
+  .meta b{color:var(--ink);}
+  .intro{
+    font-size:15px;
+    color:var(--muted);
+    max-width:640px;
+    line-height:1.6;
+    margin-top:4px;
+  }
+
+  .section-title{
+    font-size:13px;
+    letter-spacing:.06em;
+    color:var(--muted);
+    margin:36px 0 12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+  }
+  .section-title span.tag{color:#94a3b8;font-weight:600;}
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--card);
+    border-radius:16px;
+    overflow:hidden;
+  }
+  thead th{
+    text-align:left;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:.04em;
+    padding:16px 20px;
+    background:#f8fafc;
+    border-bottom:1px solid var(--line);
+  }
+  tbody td{
+    padding:18px 20px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    font-size:14.5px;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody td.name{font-weight:700;width:26%;}
+  tbody td.hito{color:#334155;}
+
+  .badge{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .b-verde{background:var(--green-bg);color:var(--green-fg);}
+  .b-ambar{background:var(--amber-bg);color:var(--amber-fg);}
+  .b-azul{background:var(--blue-bg);color:var(--blue-fg);}
+  .b-gris{background:var(--slate-bg);color:var(--slate-fg);}
+  .b-violeta{background:var(--violet-bg);color:var(--violet-fg);}
+
+  .cards{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .card{
+    background:var(--card);
+    border-radius:16px;
+    padding:22px 24px;
+  }
+  .card-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
+    margin-bottom:10px;
+    flex-wrap:wrap;
+  }
+  .card-head h3{
+    margin:0;
+    font-size:17px;
+  }
+  .card p{
+    margin:0 0 8px;
+    color:#334155;
+    font-size:14.5px;
+    line-height:1.65;
+  }
+  .card p:last-child{margin-bottom:0;}
+  .card ul{
+    margin:6px 0 0;
+    padding-left:18px;
+    color:#334155;
+    font-size:14.5px;
+    line-height:1.65;
+  }
+  .card ul li{margin-bottom:6px;}
+  .card ul li:last-child{margin-bottom:0;}
+  .next{
+    margin-top:12px;
+    padding-top:12px;
+    border-top:1px solid var(--line);
+  }
+  .next .label{
+    font-size:12px;
+    font-weight:700;
+    color:var(--teal);
+    letter-spacing:.04em;
+    display:block;
+    margin-bottom:4px;
+  }
+
+  @media (max-width:640px){
+    body{padding:24px 14px 60px;}
+    .hero{padding:24px 22px;}
+    .meta{text-align:left;}
+    h1{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div>
+      <div class="eyebrow">SAASA · ÁREA DE DISEÑO E INNOVACIÓN</div>
+      <h1>Informe de Avance de Proyectos</h1>
+      <div class="intro">Resumen del estado actual de las aplicaciones y proyectos en curso, así como los próximos hitos y acciones pendientes de cada uno.</div>
+    </div>
+    <div class="meta">
+      Fecha del informe: <b>3 de septiembre de 2026</b><br>
+      Área: <b>Diseño e Innovación</b>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <span>RESUMEN EJECUTIVO</span>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Proyecto / Aplicación</th>
+        <th>Estado</th>
+        <th>Próximo hito</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="name">Aplicación SGCA</td>
+        <td><span class="badge b-verde">EN CIERRE</span></td>
+        <td class="hito">Entrega el 7 de septiembre</td>
+      </tr>
+      <tr>
+        <td class="name">BDS — Baggage Delivery Services</td>
+        <td><span class="badge b-gris">EN ESPERA</span></td>
+        <td class="hito">Confirmación de reunión con cliente (Hugo)</td>
+      </tr>
+      <tr>
+        <td class="name">Aplicación PRM</td>
+        <td><span class="badge b-ambar">PENDIENTE DEFINICIÓN</span></td>
+        <td class="hito">Definir plataforma de mensajería (WhatsApp/Telegram)</td>
+      </tr>
+      <tr>
+        <td class="name">Aplicación BRS</td>
+        <td><span class="badge b-azul">EN LEVANTAMIENTO</span></td>
+        <td class="hito">Enviar requerimiento a proveedor para cotización</td>
+      </tr>
+      <tr>
+        <td class="name">Proyecto FMS</td>
+        <td><span class="badge b-azul">EN PROCESO</span></td>
+        <td class="hito">Credenciales SIGA (1–2 semanas) y reunión Geo-Victoria</td>
+      </tr>
+      <tr>
+        <td class="name">Aplicación PRM Beacons</td>
+        <td><span class="badge b-azul">EN PROCESO</span></td>
+        <td class="hito">El proveedor irá la próxima semana para realizar informe técnico</td>
+      </tr>
+      <tr>
+        <td class="name">Proyecto PBB</td>
+        <td><span class="badge b-violeta">POR PRIORIZAR</span></td>
+        <td class="hito">Reunión Diego–Hugo para definir prioridad</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">
+    <span>DETALLE POR PROYECTO</span>
+  </div>
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Aplicación SGCA</h3>
+        <span class="badge b-verde">EN CIERRE</span>
+      </div>
+      <p>El día 7 de septiembre se realizará la entrega de la aplicación SGCA concluida. Esta aplicación podrá utilizarse en las diferentes estaciones donde opera SAASA.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>BDS — Baggage Delivery Services</h3>
+        <span class="badge b-gris">EN ESPERA</span>
+      </div>
+      <p>El proyecto se encuentra en espera de la confirmación de Hugo respecto a la fecha de la reunión con el cliente, en la cual se le presentará y explicará el proyecto.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Aplicación PRM</h3>
+        <span class="badge b-ambar">PENDIENTE DEFINICIÓN</span>
+      </div>
+      <p>El proveedor requiere que SAASA defina si continuará utilizando el servicio de WhatsApp o si optará por migrar a otra plataforma de mensajería, como Telegram. Esta definición es necesaria para que el proveedor pueda elaborar la cotización correspondiente al Sprint 2 de las mejoras del PRM.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Aplicación BRS</h3>
+        <span class="badge b-azul">EN LEVANTAMIENTO</span>
+      </div>
+      <p>Se encuentra en proceso el levantamiento de información para las mejoras de funcionamiento y visibilidad de datos. Una vez finalizado, se enviará al proveedor para su cotización.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Proyecto FMS</h3>
+        <span class="badge b-azul">EN PROCESO</span>
+      </div>
+      <ul>
+        <li><b>Levantamiento de información:</b> se encuentra en proceso el levantamiento de información para definir los procesos de trabajo que seguirá la aplicación durante su funcionamiento.</li>
+        <li><b>Gestión de credenciales para acceso a SIGA:</b> Diego ya envió el correo solicitando la autorización para la entrega de credenciales. Se estima que este proceso tome entre 1 y 2 semanas.</li>
+        <li><b>Incorporación de Geo-Victoria:</b> Katleen Salguero tendrá una reunión esta semana para definir el flujo de trabajo a seguir para la incorporación de Geo-Victoria. Como resultado, se elaborará un cronograma de trabajo para la implementación.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Aplicación PRM Beacons</h3>
+        <span class="badge b-azul">EN PROCESO</span>
+      </div>
+      <p>Se escogió a un proveedor que comenzará a realizar el estudio técnico la otra semana para presentación a LAP.</p>
+      <div class="next">
+        <span class="label">SIGUIENTE PASO</span>
+        Una vez realizado el estudio, se presentará un informe con los puntos de ubicación propuestos para la instalación de los beacons.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Proyecto PBB</h3>
+        <span class="badge b-violeta">POR PRIORIZAR</span>
+      </div>
+      <p>Diego conversará mañana con Hugo sobre este proyecto para definir su priorización de desarrollo.</p>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
